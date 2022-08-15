@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="row">
+        <h3 class="text-center">Loyalty Program Details</h3>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{loyaltyProgram.name}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Name</h6>
+                  <h5 class="card-title">{{loyaltyProgram.memberId}} </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">memberId</h6>
+                  <h5 class="card-title">{{loyaltyProgram.milesAmount}} </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Miles Amount</h6>
+                </div>
+              </div>
+        </div>
+        <div class="col-6">
+  
+            <button class="btn btn-warning mt-4"routerLink="/traveler/{{travelerId}}/loyaltyprograms/{{loyaltyProgramId}}/edit"type="button">Edit Loyalty Program Data</button>
+            <br/>
+            <button class="btn btn-danger mt-4"(click)="deleteLoyaltyProgram()"type="button">Delete Loyalty Program</button>
+            <br/>
+            <div *ngIf="deleteData" class="bg-success">
+                <p  >{{message}}</p>
+            </div>
+            
+                <button class="btn btn-success mt-4"routerLink="/traveler/{{travelerId}}/loyaltyprograms/"type="button">Add Loyalty Program</button>
+                          <br/>
+              
+        </div>
+    </div>
+    
+
+</div>
+<div class="container mt-4">
+    <app-loyalty-programs></app-loyalty-programs>
+</div>
+

@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>Registration Form</h2>
+</div>
+<div class="container">
+<form [formGroup]="registrationForm" (ngSubmit)="register()" class="form-class">
+
+    <div class="form-group">
+    <label class="col-sm-3 col-form-label">
+        Full Name : <input class="form-control" formControlName="name" placeholder="Traveler Name"/>
+    </label>
+</div>
+<div class="form-group">
+    <label class="col-sm-3 col-form-label">
+        Nationality: <input class="form-control" formControlName="nationality" placeholder="Traveler nationality"/>
+    </label>
+</div>
+<div class="form-group">
+    <label class="col-sm-3 col-form-label">
+        Passport: <input class="form-control" formControlName="passport" placeholder="Traveler passport"/>
+    </label>
+    
+</div>
+<div class="form-group">
+    <label class="col-sm-3 col-form-label">
+        E-mail: <input class="form-control" formControlName="email" placeholder="E-mail Address"/>
+    </label>
+    <br/>
+    <small id="emailHelp" class="form-text text-muted">Your e-mail will be used as your username to access the Loyalt Program Manager on the future</small>
+</div>
+<div class="form-group">
+    <label class=" col-sm-3 col-form-label">
+        Password: <input class="form-control" formControlName="password" placeholder="password"/>
+    </label>
+</div>
+<!-- <div class="form-group">
+    <label class=" col-sm-3 col-form-label">
+        Repeat Password: <input class="form-control" formControlName="password" placeholder="password"/>
+    </label>
+</div> -->
+<div>
+    <br/>
+    <button class="btn btn-primary" type="submit">Create Traveler</button>
+   
+</div>
+
+<div *ngIf="savedData" class="bg-success">
+    <p  >{{saveSucessMessage}}</p>
+</div>
+</form>
+</div>
+
+
+
+

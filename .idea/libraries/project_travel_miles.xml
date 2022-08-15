@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="project_travel_miles">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/project_travel_miles/project_miles.zip!/" />
+      <root url="jar://$PROJECT_DIR$/project_travel_miles/dump.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

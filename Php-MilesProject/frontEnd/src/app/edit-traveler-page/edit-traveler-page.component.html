@@ -1,0 +1,31 @@
+<div class="container">
+    <h2 class="text-center">Traveler Data</h2>
+<form [formGroup]="editForm" (ngSubmit)="edit()" class="form-class">
+
+    <div class="form-group">
+    <label class="col-sm-2 col-form-label">
+        Name of the traveler: <input class="form-control" formControlName="name" placeholder="Traveler Name"/>
+    </label>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 col-form-label">
+        Nationality: <input class="form-control" formControlName="nationality" placeholder="Traveler nationality"/>
+    </label>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 col-form-label">
+        Passport: <input class="form-control" formControlName="passport" placeholder="Traveler passport"/>
+    </label>
+</div>
+<div>
+    <br/>
+    <button class="btn btn-primary" type="submit">Save Traveler Data</button>
+    <button class="btn btn-danger" type="submit">Delete Traveler</button>
+</div>
+
+<div *ngIf="savedData" class="bg-success">
+    <p  >Data saved!</p>
+</div>
+</form>
+</div>
+    <app-loyalty-programs></app-loyalty-programs>

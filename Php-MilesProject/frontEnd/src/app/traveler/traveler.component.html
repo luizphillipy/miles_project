@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div class="row">
+        <h3 class="text-center">Traveler Details</h3>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{traveler.name}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Traveler</h6>
+                  <h5 class="card-title">{{traveler.passport}} </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Passport</h6>
+                  <h5 class="card-title">{{traveler.nationality}} </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Nationality</h6>
+                </div>
+              </div>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-warning mt-4"routerLink="/traveler/{{traveler._id}}/edit"type="button">Edit traveler Data</button>
+            <br/>
+            <button class="btn btn-danger mt-4"(click)="deleteTraveler()"type="button">Delete traveler</button>
+            <br/>
+            <div *ngIf="deleteData" class="bg-success">
+                <p  >{{deleteSucessMessage}}</p>
+            </div>
+            
+                <button class="btn btn-success mt-4"routerLink="/traveler/{{travelerId}}/loyaltyprograms/"type="button">Add Loyalty Program</button>
+                          <br/>
+              
+        </div>
+    </div>
+    
+
+</div>
+<div class="container mt-4">
+    <app-loyalty-programs></app-loyalty-programs>
+</div>

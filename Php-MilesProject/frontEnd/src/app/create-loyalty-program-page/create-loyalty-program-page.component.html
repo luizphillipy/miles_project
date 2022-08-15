@@ -1,0 +1,36 @@
+<div class="container">
+    <h2 class="text-center">Loyalty Program Add Page</h2>
+<form [formGroup]="addForm" (ngSubmit)="save()" class="form-class">
+
+    <div class="form-group">
+    <label class="col-sm-2 col-form-label">
+        Loyalty Program name: <input class="form-control" formControlName="name" placeholder="Loyalty Program Name"/>
+    </label>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 col-form-label">
+        MemberId: <input class="form-control" formControlName="memberId" placeholder="Loyalty Program MemberId"/>
+    </label>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 col-form-label">
+        Miles Amount: <input class="form-control" formControlName="milesAmount" placeholder="Amount of Miles"/>
+    </label>
+</div>
+<div class="row">
+    <div class="col-8">
+    <br/>
+    <button class="btn btn-primary" type="submit">Save Data</button>
+   
+    </div>
+   
+</div>
+
+<div *ngIf="savedData" class="bg-success">
+    <p  >{{saveSucessMessage}}</p>
+</div>
+</form>
+</div>
+    
+
+

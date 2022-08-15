@@ -1,0 +1,37 @@
+
+<div class="container">
+    <h1 class="text-center">List of Loyalty Programs</h1>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name of the Program</th>
+          <th scope="col">Member ID</th>
+          <th scope="col">Miles Amount</th>
+          <th scope="col">Edit/Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let loyaltyProgram of loyaltyPrograms; index as i">
+          <th>{{i+1}}</th>
+          <td>{{ loyaltyProgram.name }}</td>
+          <td>{{ loyaltyProgram.memberId }}</td>
+          <td>{{ loyaltyProgram.milesAmount }}</td>
+          <td>
+            <button class="btn btn-info mb-1" routerLink="/traveler/{{travelerId}}/loyaltyprograms/{{loyaltyProgram._id}}/"type="button">Details</button>
+            <button class="btn btn-warning mb-1" routerLink="/traveler/{{travelerId}}/loyaltyprograms/{{loyaltyProgram._id}}/edit"type="button">Edit</button>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  <div class="container">
+    <button (click)="previousPage()" class="btn btn-info mb-1" type="submit">Prev</button>
+    <button (click)="nextPage()" class="btn btn-info mb-1" type="submit">Next</button>
+</div>
+
+  
+
